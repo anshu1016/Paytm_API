@@ -1,18 +1,17 @@
-// Assuming ./db/db.js includes your database connection setup
 
 require("./db/db.js");
 
 const express = require("express");
 const app = express();
-const PORT = 5000;
+const PORT = 3000;
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 
-// Import routers
+
 const transactionRouter = require("./routers/transaction.router.js");
 const userRouter = require("./routers/paytmUser.router.js");
 
-// Middleware
+
 app.use(cors());
 app.use(express.json());
 
